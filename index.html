@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator App with History</title>
+    <title>Voice-Enabled Calculator App</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Calculator</h1>
+        <h1>Voice Calculator</h1>
         <div class="calculator">
-            <input type="text" id="display" readonly>
+            <div id="display-container">
+                <input type="text" id="display" readonly>
+            </div>
             <div class="buttons">
                 <button onclick="clearDisplay()">C</button>
                 <button onclick="appendToDisplay('7')">7</button>
@@ -31,6 +33,10 @@
                 <button onclick="calculate()">=</button>
                 <button onclick="appendToDisplay('/')">/</button>
             </div>
+        </div>
+        <div class="voice-control">
+            <button id="start-voice">Start Voice Control</button>
+            <p id="voice-status">Voice control is off</p>
         </div>
         <div class="history">
             <h2>History</h2>
