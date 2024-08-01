@@ -19,15 +19,16 @@ body {
     width: 300px;
 }
 
-h1 {
+h1, h2 {
     color: #333;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .calculator {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 #display {
@@ -77,4 +78,28 @@ button:first-child {
 
 button:first-child:hover {
     background-color: #c0392b;
+}
+
+.history {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 1rem;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#history-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+#history-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+#history-list li:last-child {
+    border-bottom: none;
 }
